@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  reviewshield:
+    build: .
+    image: nikhilbhadoriya/fakereviewprediction-reviewshield:latest
+    container_name: reviewshield_app
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    volumes:
+      - .:/app  # Maps entire root for live development
+    environment:
+      - PYTHONUNBUFFERED=1
+      - API_URL=http://localhost:8000
+    restart: unless-stopped

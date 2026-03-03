@@ -1,0 +1,15 @@
+# Model files (too large)
+*.pkl
+
+# Dataset (too large)
+*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+venv/
+.venv/
